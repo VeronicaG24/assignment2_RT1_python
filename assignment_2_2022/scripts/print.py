@@ -33,7 +33,7 @@ def main():
 	# Initialize the node
 	rospy.init_node('print')
 	# Get the frequency parameter from the ROS parameter server
-	frequency = rospy.get_param("freq")
+	frequency = rospy.get_param("frequency")
 	# Subscribe to the position_velocity topic and pass the info info callback function
 	info_pos = rospy.Subscriber("/position_velocity", Position_velocity, info)
 	# Spin the node to keep it running
