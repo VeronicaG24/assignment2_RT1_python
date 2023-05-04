@@ -1,0 +1,167 @@
+\hypertarget{subscriber_8cpp}{}\doxysection{follow\+\_\+goal/src/subscriber.cpp File Reference}
+\label{subscriber_8cpp}\index{follow\_goal/src/subscriber.cpp@{follow\_goal/src/subscriber.cpp}}
+
+
+R\+OS node for counting goals reached and deleted.  
+
+
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include \char`\"{}follow\+\_\+goal/pos\+\_\+vel.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$follow\+\_\+goal/\+Planning\+Action\+Goal.\+h$>$}\newline
+Include dependency graph for subscriber.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{subscriber_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{subscriber_8cpp_ab103182ef0d2f29733647504b4e20344}{pos\+\_\+vel\+\_\+callback}} (const follow\+\_\+goal\+::pos\+\_\+vel\+::\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{subscriber_8cpp_aa96769046dc6771177539a6d1a5efb71}{goal\+\_\+callback}} (const follow\+\_\+goal\+::\+Planning\+Action\+Goal\+::\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{subscriber_8cpp_a677c806d234342782e3d8cf31c7b4cc2}{get\+\_\+dist\+\_\+vel\+\_\+from\+\_\+goal}} ()
+\item 
+int \mbox{\hyperlink{subscriber_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{subscriber_8cpp_a103d17f7ae810b61a0196086a9642477}{x\+\_\+pos}}
+\item 
+float \mbox{\hyperlink{subscriber_8cpp_a17c98f6e8cadb148806771b487612871}{y\+\_\+pos}}
+\item 
+float \mbox{\hyperlink{subscriber_8cpp_a3de37f75c60c34f649fd275f98dccd08}{x\+\_\+vel}}
+\item 
+float \mbox{\hyperlink{subscriber_8cpp_abad2a40e891314347d092d5a8f4ebb84}{y\+\_\+vel}}
+\item 
+float \mbox{\hyperlink{subscriber_8cpp_a829831b69f522e8f5ae5dcdc28158d3e}{x\+\_\+goal}}
+\item 
+float \mbox{\hyperlink{subscriber_8cpp_a20e8d23393e688fc52779c872bdc1e45}{y\+\_\+goal}}
+\item 
+float \mbox{\hyperlink{subscriber_8cpp_a1b8c645264a548861c61b9ef4b1485cc}{dist\+\_\+goal}}
+\item 
+float \mbox{\hyperlink{subscriber_8cpp_a66e985d480ed35168618b353fcbf23c8}{average\+\_\+vel}}
+\item 
+double \mbox{\hyperlink{subscriber_8cpp_a4c45cdff103e6644a620ba5061509f22}{frequency}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{subscriber_8cpp_a9f8f559934ca95930e4ab2cac5a2bf4d}{sub1}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{subscriber_8cpp_a653ccfdc13baa6bb7ef0ce8f2c10de90}{sub2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+R\+OS node for counting goals reached and deleted. 
+
+\begin{DoxyAuthor}{Author}
+Veronica Gavagna 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+26/01/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{subscriber_8cpp_a677c806d234342782e3d8cf31c7b4cc2}\label{subscriber_8cpp_a677c806d234342782e3d8cf31c7b4cc2}} 
+\index{subscriber.cpp@{subscriber.cpp}!get\_dist\_vel\_from\_goal@{get\_dist\_vel\_from\_goal}}
+\index{get\_dist\_vel\_from\_goal@{get\_dist\_vel\_from\_goal}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_dist\_vel\_from\_goal()}{get\_dist\_vel\_from\_goal()}}
+{\footnotesize\ttfamily void get\+\_\+dist\+\_\+vel\+\_\+from\+\_\+goal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{subscriber_8cpp_aa96769046dc6771177539a6d1a5efb71}\label{subscriber_8cpp_aa96769046dc6771177539a6d1a5efb71}} 
+\index{subscriber.cpp@{subscriber.cpp}!goal\_callback@{goal\_callback}}
+\index{goal\_callback@{goal\_callback}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{goal\_callback()}{goal\_callback()}}
+{\footnotesize\ttfamily void goal\+\_\+callback (\begin{DoxyParamCaption}\item[{const follow\+\_\+goal\+::\+Planning\+Action\+Goal\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{subscriber_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{subscriber_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{subscriber.cpp@{subscriber.cpp}!main@{main}}
+\index{main@{main}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{subscriber_8cpp_ab103182ef0d2f29733647504b4e20344}\label{subscriber_8cpp_ab103182ef0d2f29733647504b4e20344}} 
+\index{subscriber.cpp@{subscriber.cpp}!pos\_vel\_callback@{pos\_vel\_callback}}
+\index{pos\_vel\_callback@{pos\_vel\_callback}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{pos\_vel\_callback()}{pos\_vel\_callback()}}
+{\footnotesize\ttfamily void pos\+\_\+vel\+\_\+callback (\begin{DoxyParamCaption}\item[{const follow\+\_\+goal\+::pos\+\_\+vel\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{subscriber_8cpp_a66e985d480ed35168618b353fcbf23c8}\label{subscriber_8cpp_a66e985d480ed35168618b353fcbf23c8}} 
+\index{subscriber.cpp@{subscriber.cpp}!average\_vel@{average\_vel}}
+\index{average\_vel@{average\_vel}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{average\_vel}{average\_vel}}
+{\footnotesize\ttfamily float average\+\_\+vel}
+
+\mbox{\Hypertarget{subscriber_8cpp_a1b8c645264a548861c61b9ef4b1485cc}\label{subscriber_8cpp_a1b8c645264a548861c61b9ef4b1485cc}} 
+\index{subscriber.cpp@{subscriber.cpp}!dist\_goal@{dist\_goal}}
+\index{dist\_goal@{dist\_goal}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{dist\_goal}{dist\_goal}}
+{\footnotesize\ttfamily float dist\+\_\+goal}
+
+\mbox{\Hypertarget{subscriber_8cpp_a4c45cdff103e6644a620ba5061509f22}\label{subscriber_8cpp_a4c45cdff103e6644a620ba5061509f22}} 
+\index{subscriber.cpp@{subscriber.cpp}!frequency@{frequency}}
+\index{frequency@{frequency}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{frequency}{frequency}}
+{\footnotesize\ttfamily double frequency}
+
+\mbox{\Hypertarget{subscriber_8cpp_a9f8f559934ca95930e4ab2cac5a2bf4d}\label{subscriber_8cpp_a9f8f559934ca95930e4ab2cac5a2bf4d}} 
+\index{subscriber.cpp@{subscriber.cpp}!sub1@{sub1}}
+\index{sub1@{sub1}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{sub1}{sub1}}
+{\footnotesize\ttfamily ros\+::\+Subscriber sub1}
+
+\mbox{\Hypertarget{subscriber_8cpp_a653ccfdc13baa6bb7ef0ce8f2c10de90}\label{subscriber_8cpp_a653ccfdc13baa6bb7ef0ce8f2c10de90}} 
+\index{subscriber.cpp@{subscriber.cpp}!sub2@{sub2}}
+\index{sub2@{sub2}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{sub2}{sub2}}
+{\footnotesize\ttfamily ros\+::\+Subscriber sub2}
+
+\mbox{\Hypertarget{subscriber_8cpp_a829831b69f522e8f5ae5dcdc28158d3e}\label{subscriber_8cpp_a829831b69f522e8f5ae5dcdc28158d3e}} 
+\index{subscriber.cpp@{subscriber.cpp}!x\_goal@{x\_goal}}
+\index{x\_goal@{x\_goal}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{x\_goal}{x\_goal}}
+{\footnotesize\ttfamily float x\+\_\+goal}
+
+\mbox{\Hypertarget{subscriber_8cpp_a103d17f7ae810b61a0196086a9642477}\label{subscriber_8cpp_a103d17f7ae810b61a0196086a9642477}} 
+\index{subscriber.cpp@{subscriber.cpp}!x\_pos@{x\_pos}}
+\index{x\_pos@{x\_pos}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{x\_pos}{x\_pos}}
+{\footnotesize\ttfamily float x\+\_\+pos}
+
+\mbox{\Hypertarget{subscriber_8cpp_a3de37f75c60c34f649fd275f98dccd08}\label{subscriber_8cpp_a3de37f75c60c34f649fd275f98dccd08}} 
+\index{subscriber.cpp@{subscriber.cpp}!x\_vel@{x\_vel}}
+\index{x\_vel@{x\_vel}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{x\_vel}{x\_vel}}
+{\footnotesize\ttfamily float x\+\_\+vel}
+
+\mbox{\Hypertarget{subscriber_8cpp_a20e8d23393e688fc52779c872bdc1e45}\label{subscriber_8cpp_a20e8d23393e688fc52779c872bdc1e45}} 
+\index{subscriber.cpp@{subscriber.cpp}!y\_goal@{y\_goal}}
+\index{y\_goal@{y\_goal}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{y\_goal}{y\_goal}}
+{\footnotesize\ttfamily float y\+\_\+goal}
+
+\mbox{\Hypertarget{subscriber_8cpp_a17c98f6e8cadb148806771b487612871}\label{subscriber_8cpp_a17c98f6e8cadb148806771b487612871}} 
+\index{subscriber.cpp@{subscriber.cpp}!y\_pos@{y\_pos}}
+\index{y\_pos@{y\_pos}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{y\_pos}{y\_pos}}
+{\footnotesize\ttfamily float y\+\_\+pos}
+
+\mbox{\Hypertarget{subscriber_8cpp_abad2a40e891314347d092d5a8f4ebb84}\label{subscriber_8cpp_abad2a40e891314347d092d5a8f4ebb84}} 
+\index{subscriber.cpp@{subscriber.cpp}!y\_vel@{y\_vel}}
+\index{y\_vel@{y\_vel}!subscriber.cpp@{subscriber.cpp}}
+\doxysubsubsection{\texorpdfstring{y\_vel}{y\_vel}}
+{\footnotesize\ttfamily float y\+\_\+vel}
+

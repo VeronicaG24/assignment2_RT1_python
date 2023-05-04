@@ -20,7 +20,7 @@ How to run
 To launch the assignment is necessary to clone the GitHub repository using:
 
 ```bash
-git clone https://github.com/VeronicaG24/assignment2_RT1.git
+git clone command https://github.com/VeronicaG24/follow_goal.git
 ```
 
 and move all the content into the folder `/my_ros/src`.
@@ -104,12 +104,12 @@ get state from action client;
 call waitForService method;
 
 while ROS is working: {
-    call input_menu function;
-    get the state of the action client:
-    set state for setting goal as the comparison between "SUCCEEDED" and  the state of the action client;
+    call input_menu function
+    get the state of the action client
+    set state for setting goal as the comparison between "SUCCEEDED" and  the state of the action client
 
     if the state of the action client is not 0 and the comparison returns 0:
-        decrease variable to state if the goal is set;
+        decrease variable to state if the goal is set
 
     switch in base of values of varible for choosed option: {
         case when = 1:
@@ -117,7 +117,7 @@ while ROS is working: {
             compare "SUCCEEDED" and object state; 
 
             if the comparison return 1 and a goal is set:
-                ask to delate the goal before setting a new one;
+                ask to delate the goal before setting a new one
             
             if the comparison return 0 and a goal is set
                 decrease variable to state if the goal is set;
@@ -156,7 +156,7 @@ while ROS is working: {
 return 0;
 ```
 
-* `get_number_goals()`: calls the custom service and print the number of reached and deleted goal.
+* `get_bumber_goals()`: calls the custom service and print the number of reached and deleted goal.
 
 ```python
 call waitForExistence method;
@@ -301,6 +301,8 @@ Global variables are defined at the start of the code:
 * `dist_goal`: float for distance from the goal
 * `average_vel`: float for average velocity of the robot
 * `frequency`: double for frequency rate
+* `pub1`: instance for publisher for `/robot_info`
+* `pub2`: instance for publisher for `/reaching_goal/goal`
 
 The code is divided into separate functions:
 
@@ -315,9 +317,9 @@ get frequency parameters;
 set rate frequency;
 
 while ROS is working: {
-    call subscriber method with arguments "/robot_info", 1, and pos_vel_callback, assign the retun velue to `sub1` object;
+    call subscriber method with arguments "/robot_info", 1, and pos_vel_callback, assign the retun velue to `sub1`;
 
-    call advertiseService with arguments "/reaching_goal/goal", and goal_callback, assign the retun velue to `sub2`;
+    call subscriber method with arguments "/reaching_goal/goal", and goal_callback, assign the retun velue to `sub2`;
 
     call get_dist_vel_from_goal() function;
 
@@ -363,6 +365,8 @@ Launch file
 ----------------------
 
 ```python
+to start the whole program, and pass the rate parameter for printing the information of the subscriber node
+
 set the rate frequency value;
 
 spawn goal_set node;

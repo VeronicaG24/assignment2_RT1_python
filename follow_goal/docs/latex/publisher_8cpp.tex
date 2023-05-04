@@ -1,0 +1,102 @@
+\hypertarget{publisher_8cpp}{}\doxysection{follow\+\_\+goal/src/publisher.cpp File Reference}
+\label{publisher_8cpp}\index{follow\_goal/src/publisher.cpp@{follow\_goal/src/publisher.cpp}}
+
+
+R\+OS node for counting goals reached and deleted.  
+
+
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/\+Odometry.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}follow\+\_\+goal/pos\+\_\+vel.\+h\char`\"{}}\newline
+Include dependency graph for publisher.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{publisher_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{publisher_8cpp_a4d5ad58a51d16fae2db4139bd59c621f}{pos\+\_\+vel\+\_\+callback}} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&msg)
+\item 
+int \mbox{\hyperlink{publisher_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{publisher_8cpp_a103d17f7ae810b61a0196086a9642477}{x\+\_\+pos}}
+\item 
+float \mbox{\hyperlink{publisher_8cpp_a17c98f6e8cadb148806771b487612871}{y\+\_\+pos}}
+\item 
+float \mbox{\hyperlink{publisher_8cpp_a3de37f75c60c34f649fd275f98dccd08}{x\+\_\+vel}}
+\item 
+float \mbox{\hyperlink{publisher_8cpp_abad2a40e891314347d092d5a8f4ebb84}{y\+\_\+vel}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{publisher_8cpp_a350594df3e8f6948c8462edfd41ce086}{pub}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+R\+OS node for counting goals reached and deleted. 
+
+\begin{DoxyAuthor}{Author}
+Veronica Gavagna 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+26/01/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{publisher_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{publisher_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{publisher.cpp@{publisher.cpp}!main@{main}}
+\index{main@{main}!publisher.cpp@{publisher.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{publisher_8cpp_a4d5ad58a51d16fae2db4139bd59c621f}\label{publisher_8cpp_a4d5ad58a51d16fae2db4139bd59c621f}} 
+\index{publisher.cpp@{publisher.cpp}!pos\_vel\_callback@{pos\_vel\_callback}}
+\index{pos\_vel\_callback@{pos\_vel\_callback}!publisher.cpp@{publisher.cpp}}
+\doxysubsubsection{\texorpdfstring{pos\_vel\_callback()}{pos\_vel\_callback()}}
+{\footnotesize\ttfamily void pos\+\_\+vel\+\_\+callback (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{publisher_8cpp_a350594df3e8f6948c8462edfd41ce086}\label{publisher_8cpp_a350594df3e8f6948c8462edfd41ce086}} 
+\index{publisher.cpp@{publisher.cpp}!pub@{pub}}
+\index{pub@{pub}!publisher.cpp@{publisher.cpp}}
+\doxysubsubsection{\texorpdfstring{pub}{pub}}
+{\footnotesize\ttfamily ros\+::\+Publisher pub}
+
+\mbox{\Hypertarget{publisher_8cpp_a103d17f7ae810b61a0196086a9642477}\label{publisher_8cpp_a103d17f7ae810b61a0196086a9642477}} 
+\index{publisher.cpp@{publisher.cpp}!x\_pos@{x\_pos}}
+\index{x\_pos@{x\_pos}!publisher.cpp@{publisher.cpp}}
+\doxysubsubsection{\texorpdfstring{x\_pos}{x\_pos}}
+{\footnotesize\ttfamily float x\+\_\+pos}
+
+\mbox{\Hypertarget{publisher_8cpp_a3de37f75c60c34f649fd275f98dccd08}\label{publisher_8cpp_a3de37f75c60c34f649fd275f98dccd08}} 
+\index{publisher.cpp@{publisher.cpp}!x\_vel@{x\_vel}}
+\index{x\_vel@{x\_vel}!publisher.cpp@{publisher.cpp}}
+\doxysubsubsection{\texorpdfstring{x\_vel}{x\_vel}}
+{\footnotesize\ttfamily float x\+\_\+vel}
+
+\mbox{\Hypertarget{publisher_8cpp_a17c98f6e8cadb148806771b487612871}\label{publisher_8cpp_a17c98f6e8cadb148806771b487612871}} 
+\index{publisher.cpp@{publisher.cpp}!y\_pos@{y\_pos}}
+\index{y\_pos@{y\_pos}!publisher.cpp@{publisher.cpp}}
+\doxysubsubsection{\texorpdfstring{y\_pos}{y\_pos}}
+{\footnotesize\ttfamily float y\+\_\+pos}
+
+\mbox{\Hypertarget{publisher_8cpp_abad2a40e891314347d092d5a8f4ebb84}\label{publisher_8cpp_abad2a40e891314347d092d5a8f4ebb84}} 
+\index{publisher.cpp@{publisher.cpp}!y\_vel@{y\_vel}}
+\index{y\_vel@{y\_vel}!publisher.cpp@{publisher.cpp}}
+\doxysubsubsection{\texorpdfstring{y\_vel}{y\_vel}}
+{\footnotesize\ttfamily float y\+\_\+vel}
+

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	<param name="frequency" type="double" value="1.0"/>
+	<node pkg="follow_goal" type="setGoal_robot" name="setGoal_robot" output="screen" launch-prefix="xterm -e"/>
+	<node pkg="follow_goal" type="publisher_robot" name="publisher_robot" output="screen" launch-prefix="xterm -e"/>
+	<node pkg="follow_goal" type="subscriber_robot" name="subscriber_robot"  output="screen" launch-prefix="xterm -e"/>
+	<node pkg="follow_goal" type="countGoal_robot" name="countGoal_robot" output="screen" launch-prefix="xterm -e"/>
+</launch>

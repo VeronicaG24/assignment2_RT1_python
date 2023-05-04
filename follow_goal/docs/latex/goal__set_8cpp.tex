@@ -1,0 +1,129 @@
+\hypertarget{goal__set_8cpp}{}\doxysection{follow\+\_\+goal/src/goal\+\_\+set.cpp File Reference}
+\label{goal__set_8cpp}\index{follow\_goal/src/goal\_set.cpp@{follow\_goal/src/goal\_set.cpp}}
+
+
+R\+OS node for counting goals reached and deleted.  
+
+
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Pose.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Point.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}follow\+\_\+goal/\+Goal\+Number.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$actionlib/client/terminal\+\_\+state.\+h$>$}\newline
+{\ttfamily \#include $<$follow\+\_\+goal/\+Planning\+Action.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/client/simple\+\_\+action\+\_\+client.\+h$>$}\newline
+Include dependency graph for goal\+\_\+set.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{goal__set_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{goal__set_8cpp_adb66de69c27b2c4e9dcf650c2aeb641f}{get\+\_\+number\+\_\+goals}} ()
+\item 
+int \mbox{\hyperlink{goal__set_8cpp_a7894d4cbd7011ae180e745af0941ea12}{input\+\_\+menu}} ()
+\item 
+void \mbox{\hyperlink{goal__set_8cpp_a5d6a4832aee70aae47ebde36507eefea}{ask\+\_\+goal}} ()
+\item 
+int \mbox{\hyperlink{goal__set_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{goal__set_8cpp_abe9e64ff92b4c5d6588ab16a3f381235}{reached}}
+\item 
+int \mbox{\hyperlink{goal__set_8cpp_a3cb0d95aa820737d010fdfaccac92ec3}{deleted}}
+\item 
+float \mbox{\hyperlink{goal__set_8cpp_a103d17f7ae810b61a0196086a9642477}{x\+\_\+pos}}
+\item 
+float \mbox{\hyperlink{goal__set_8cpp_a17c98f6e8cadb148806771b487612871}{y\+\_\+pos}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{goal__set_8cpp_a17bcd065930a8a7f9f194078d9977268}{client}}
+\item 
+follow\+\_\+goal\+::\+Goal\+Number \mbox{\hyperlink{goal__set_8cpp_adc528314871b00deaed2ac6cd6fb7250}{srv}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+R\+OS node for counting goals reached and deleted. 
+
+\begin{DoxyAuthor}{Author}
+Veronica Gavagna 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+26/01/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{goal__set_8cpp_a5d6a4832aee70aae47ebde36507eefea}\label{goal__set_8cpp_a5d6a4832aee70aae47ebde36507eefea}} 
+\index{goal\_set.cpp@{goal\_set.cpp}!ask\_goal@{ask\_goal}}
+\index{ask\_goal@{ask\_goal}!goal\_set.cpp@{goal\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{ask\_goal()}{ask\_goal()}}
+{\footnotesize\ttfamily void ask\+\_\+goal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{goal__set_8cpp_adb66de69c27b2c4e9dcf650c2aeb641f}\label{goal__set_8cpp_adb66de69c27b2c4e9dcf650c2aeb641f}} 
+\index{goal\_set.cpp@{goal\_set.cpp}!get\_number\_goals@{get\_number\_goals}}
+\index{get\_number\_goals@{get\_number\_goals}!goal\_set.cpp@{goal\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_number\_goals()}{get\_number\_goals()}}
+{\footnotesize\ttfamily void get\+\_\+number\+\_\+goals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{goal__set_8cpp_a7894d4cbd7011ae180e745af0941ea12}\label{goal__set_8cpp_a7894d4cbd7011ae180e745af0941ea12}} 
+\index{goal\_set.cpp@{goal\_set.cpp}!input\_menu@{input\_menu}}
+\index{input\_menu@{input\_menu}!goal\_set.cpp@{goal\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{input\_menu()}{input\_menu()}}
+{\footnotesize\ttfamily int input\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{goal__set_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{goal__set_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{goal\_set.cpp@{goal\_set.cpp}!main@{main}}
+\index{main@{main}!goal\_set.cpp@{goal\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{goal__set_8cpp_a17bcd065930a8a7f9f194078d9977268}\label{goal__set_8cpp_a17bcd065930a8a7f9f194078d9977268}} 
+\index{goal\_set.cpp@{goal\_set.cpp}!client@{client}}
+\index{client@{client}!goal\_set.cpp@{goal\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client client}
+
+\mbox{\Hypertarget{goal__set_8cpp_a3cb0d95aa820737d010fdfaccac92ec3}\label{goal__set_8cpp_a3cb0d95aa820737d010fdfaccac92ec3}} 
+\index{goal\_set.cpp@{goal\_set.cpp}!deleted@{deleted}}
+\index{deleted@{deleted}!goal\_set.cpp@{goal\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{deleted}{deleted}}
+{\footnotesize\ttfamily int deleted}
+
+\mbox{\Hypertarget{goal__set_8cpp_abe9e64ff92b4c5d6588ab16a3f381235}\label{goal__set_8cpp_abe9e64ff92b4c5d6588ab16a3f381235}} 
+\index{goal\_set.cpp@{goal\_set.cpp}!reached@{reached}}
+\index{reached@{reached}!goal\_set.cpp@{goal\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{reached}{reached}}
+{\footnotesize\ttfamily int reached}
+
+\mbox{\Hypertarget{goal__set_8cpp_adc528314871b00deaed2ac6cd6fb7250}\label{goal__set_8cpp_adc528314871b00deaed2ac6cd6fb7250}} 
+\index{goal\_set.cpp@{goal\_set.cpp}!srv@{srv}}
+\index{srv@{srv}!goal\_set.cpp@{goal\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{srv}{srv}}
+{\footnotesize\ttfamily follow\+\_\+goal\+::\+Goal\+Number srv}
+
+\mbox{\Hypertarget{goal__set_8cpp_a103d17f7ae810b61a0196086a9642477}\label{goal__set_8cpp_a103d17f7ae810b61a0196086a9642477}} 
+\index{goal\_set.cpp@{goal\_set.cpp}!x\_pos@{x\_pos}}
+\index{x\_pos@{x\_pos}!goal\_set.cpp@{goal\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{x\_pos}{x\_pos}}
+{\footnotesize\ttfamily float x\+\_\+pos}
+
+\mbox{\Hypertarget{goal__set_8cpp_a17c98f6e8cadb148806771b487612871}\label{goal__set_8cpp_a17c98f6e8cadb148806771b487612871}} 
+\index{goal\_set.cpp@{goal\_set.cpp}!y\_pos@{y\_pos}}
+\index{y\_pos@{y\_pos}!goal\_set.cpp@{goal\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{y\_pos}{y\_pos}}
+{\footnotesize\ttfamily float y\+\_\+pos}
+
